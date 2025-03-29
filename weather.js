@@ -91,7 +91,10 @@ let val=document.getElementById("i1");
 val.oninput = function() {
     let input = document.getElementById("i1");
     let icon = document.getElementsByClassName("fas fa-search")[0]; 
-    if (icon) {
+    
+    if (icon) { 
         icon.style.display = input.value.trim() !== "" ? "none" : "block";
+    } else {
+        console.error("Search icon not found!");
     }
 };
